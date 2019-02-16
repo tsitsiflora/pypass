@@ -7,18 +7,20 @@ nickname = str(input(">>>Nickname: "))
 
 dob = str(input(">>>Date of Birth DDMMYYYY: "))
     
-adds = str(input("\n\nWould you like to add more information about the target?: "))
-if adds == 'yes' or 'y':
-    sp_chars = str(input("Things like fav series/band, food or phrases: "))
-elif adds == 'no' or 'n':
-    pass
+adds = str(input("\n\nWould you like to add more information about the target?[Y/N]: "))
+if adds == 'Y':
+    other = str(input("Things like fav series/band, food or phrases: "))
+elif adds == 'N':
+    print('Password list ready!')
+else :
+    print("Invalid input!")
 
 def clean_input(a):
     clean = a.lower()
     return ''.join(i for i in clean if i.isalnum())
 
 
-def pypass(name, surname, dob, nickname, sp_chars):
+def pypass():
     if name != 0 and surname != 0 and dob != 0:
         pass0 = clean_input(name + surname)
         pass1 = clean_input(name + surname + dob)
@@ -42,7 +44,7 @@ def pypass(name, surname, dob, nickname, sp_chars):
         pass19 = clean_input(nickname + '@' + dob[4:])
         pass20 = clean_input(nickname + '@' + dob[6:])
         pass21 = clean_input(nickname + '@' + dob[:4])
-        
+
 
 
 
@@ -55,6 +57,6 @@ def pypass(name, surname, dob, nickname, sp_chars):
 
         
 if __name__ == '__main__':
-    pypass(name, surname, dob, nickname, sp_chars)
+    pypass()
 
 
