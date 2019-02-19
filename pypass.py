@@ -1,5 +1,4 @@
 import datetime
-import os
 
 name = str(input(">>>Name: "))
 surname = str(input(">>>Surname: "))
@@ -23,10 +22,10 @@ def validate(date_str):
     try:
         datetime.datetime.strptime(date_str, '%d%m%Y')
     except ValueError:
-        raise ValueError("Incorrect data format, should be DD-MM-YYYY")
+        raise ValueError("Incorrect date format, should be DDMMYYYY")
 
 
-def pypass():
+def main():
     if name != 0 and surname != 0 and dob != 0:
         pass0 = clean_input(name + surname)
         pass1 = clean_input(name + surname + validate(dob))
@@ -53,7 +52,14 @@ def pypass():
         pass22 = clean_input(surname + name)
         pass23 = clean_input(name + nickname)
         pass24 = clean_input(nickname + surname)
-
+        pass25 = clean_input(surname + name + validate(dob))
+        pass26 = clean_input(surname + validate(dob[4:]))
+        pass27 = clean_input(surname + validate(dob[6:]))
+        pass28 = clean_input(surname + validate(dob[:4]))
+        pass29 = clean_input(nickname + surname + validate(dob))
+        pass30 = clean_input(nickname + surname + validate(dob[4:]))
+        pass31 = clean_input(nickname + surname + validate(dob[6:]))
+        pass26 = clean_input(nickname + surname + validate(dob[:4]))
 
 
         with open(name + '.txt', 'w') as f:
@@ -64,6 +70,6 @@ def pypass():
            
         
 if __name__ == '__main__':
-    pypass()
+    main()
 
 
