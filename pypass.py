@@ -24,6 +24,9 @@ def validate(date_str):
     except ValueError:
         raise ValueError("Incorrect date format, should be DDMMYYYY")
 
+def organise(info):
+    
+
 
 def main():
     if name != 0 and surname != 0 and dob != 0:
