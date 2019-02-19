@@ -58,7 +58,7 @@ def pypass():
 
         with open(name + '.txt', 'w') as f:
             content = [pass0, pass1, pass2, pass3, pass4, pass5, pass6, pass7, pass8, pass9, pass10, pass11,
-                    pass12, pass13, pass14, pass15, pass16, pass17, pass18, pass19, pass20, pass21 ]
+                    pass12, pass13, pass14, pass15, pass16, pass17, pass18, pass19, pass20, pass21, pass22, pass23, pass24 ]
             for i in content:
                 print('{0}'.format(i), file=f)
            
