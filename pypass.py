@@ -24,13 +24,13 @@ def validate(date_str):
     except ValueError:
         raise ValueError("Incorrect date format, should be DDMMYYYY")
 
-def organise(info):
-
-
+def parse_other(info):
+    ls = info.split(',')
+    return ls
 
 def main():
     try:
-        if name != 0 and surname != 0 and dob != 0:
+        if name != 0 and surname != 0 and dob != 0 and other != 0:
             pass0 = clean_input(name + surname)
             pass1 = clean_input(name + surname + validate(dob))
             pass2 = clean_input(name + surname + validate(dob[4:]))
@@ -64,6 +64,10 @@ def main():
             pass30 = clean_input(nickname + surname + validate(dob[4:]))
             pass31 = clean_input(nickname + surname + validate(dob[6:]))
             pass32 = clean_input(nickname + surname + validate(dob[:4]))
+
+            extra = parse_other(other)
+            pass33 = clean_input(name + extra[1])
+            pass34 = clean_input
             
     except Exception as ex:
         print(ex)
