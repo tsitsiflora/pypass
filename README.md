@@ -19,8 +19,9 @@ You need Python3 to run pypass.
 See .LICENCE 
 
 ## quick start
-
+```
 python3 pypass.py
+```
 
 ## author
 
