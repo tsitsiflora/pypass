@@ -48,6 +48,8 @@ def basic(name, surname):
             print('{0}'.format(i), file=f)
                     
 def main():
+    console_i()
+    fstlevel(name)
 
 
 
