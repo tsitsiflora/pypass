@@ -1,5 +1,30 @@
 # pypass
 
-I'm always learning how to use new Linux tools. It's fun and that's how I pass my time. Recently I decided to learn how to hack someone's email password(there was a motive behind). To do this I wanted to use hydra, it's probablt the easiest tool when it comes to passwords in Linux. In able to use hydra, I needed password lists. And I did not want to download password lists online because chances are they wouldn't match somehow. So how about I look for a password compiler(not sure yet what to call it). An open source program that takes information about the target and compiles a list of possible passwords. I came across cupp. It's a great program. But the only problem for me was that it produced files with at least 3000 passwords. That's just a lot. I wanted something simpler. I decided to reinvent the wheel, come up with my own script that does the same but in a much simpler way. Something that beginners can understand and use. In this article I'm going to walk you through pypass and how it works.
+Article1: https://medium.com/@tsitsimunikwa97/pypass-a-beginner-level-password-compiler-4922b5a7e04f
 
+## about
+
+Weak passwords can be defined as short, those that use only alphanumeric characters or one that is "obvious". When a password is obvious it means it's easy to remember for that person, but also easy to decrypt for an attacker.People often use obvious passwords such as the names of their children or their house number in order not to forget them. However, the simpler the password, the easier to detect. Because people tend to create "obvious" passwords more, I created pypass, a program that returns a list of passwords based on the target information.
+
+pypass is a password compiler, written in Python. It accepts input about the target from the user and returns possible passwords in a .txt file. Password lists are custom made, based on the information the user provides. This caters for passwords that include native language words. pypass can be used when performing password cracking(ethically) using the dictionary attack.
+
+### Be sure to leave a star on the project to show your support.
+
+## requirements
+
+You need Python3 to run pypass.
+
+## license
+
+See .LICENCE 
+
+## quick start
+
+python3 pypass.py
+
+## author
+
+Tsitsi Flora Munikwa 
+
+## contribution
 
