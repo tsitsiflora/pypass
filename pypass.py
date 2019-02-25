@@ -1,21 +1,22 @@
 import datetime
 
-name = str(input(">>>Name: "))
-if name == "":
-    name = str(input("You have to enter at least the name: "))
+def console_i():
+    name = str(input(">>>Name: "))
+    if name == "":
+        name = str(input("You have to enter at least the name: "))
 
-
-surname = str(input(">>>Surname: "))
-nickname = str(input(">>>Nickname: "))
-dob = str(input(">>>Date of Birth DDMMYYYY: "))
-    
-adds = str(input("\n\nWould you like to add more information about the target?[Y/N]: "))
-if adds == 'y' or 'Y':
-    other = str(input("Things like fav series/band, food or phrases separated by commas: "))
-elif adds == 'N' or 'n':
-    print('Password list ready!')
-else :
-    print("Invalid input!")
+    surname = str(input(">>>Surname: "))
+    nickname = str(input(">>>Nickname: "))
+    dob = str(input(">>>Date of Birth [DDMMYYYY]: "))
+        
+    adds = str(input("\n\n>>>Would you like to add more information about the target?[Y/N]: "))
+    if adds == 'y' or 'Y':
+        other = str(input(">>>Things like fav series/band, food or phrases [separated by commas]: "))
+    elif adds == 'N' or 'n':
+        print('Password list ready!')
+    else :
+        print("Invalid input!")
+    return name, surname, nickname, dob, other
 
 def clean_input(a):
     clean = a.lower()
@@ -32,7 +33,11 @@ def parse_other(info):
     ls = info.split(',')
     return ls
 
-def basic():
+def fstlevel(name):
+    pass0 = name
+    pass1 = name.title()
+
+def basic(name, surname):
     if name != 0 and surname != 0:
         pass0 = clean_input(name + surname)
         pass1 = clean_input(surname + name)
@@ -42,3 +47,9 @@ def basic():
         for i in content:
             print('{0}'.format(i), file=f)
                     
+def main():
+
+
+
+if __name__ == "__main__":
+    main()
