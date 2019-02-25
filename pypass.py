@@ -7,7 +7,7 @@ def console_i():
 
     surname = str(input(">>>Surname: "))
     nickname = str(input(">>>Nickname: "))
-    dob = str(input(">>>Date of Birth [DDMMYYYY]: "))
+    dob = str(input(">>>Date of Birth [YYYY-MM-DD]: "))
         
     adds = str(input("\n\n>>>Would you like to add more information about the target?[Y/N]: "))
     if adds == 'y' or 'Y':
@@ -22,12 +22,14 @@ def clean_input(a):
     clean = a.lower()
     return ''.join(i for i in clean if i.isalnum())
 
-def validate(date_str):
+
+def validate(date_text):
     try:
-        tdate = datetime.datetime.strptime(date_str, '%d%m%Y')
-        return str(tdate)
+        if date_text != datetime.datetime.strptime(date_text, "%Y-%m-%d").strftime('%Y-%m-%d'):
+            raise ValueError
+        return True
     except ValueError:
-        raise ValueError("Incorrect date format, should be DDMMYYYY")
+        return False    
 
 def parse_other(info):
     ls = info.split(',')
