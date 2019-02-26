@@ -19,8 +19,14 @@ You need Python3 to run pypass.
 See .LICENCE 
 
 ## quick start
-```
+```python
+
+# to get help information
+python3 pypass.py --help
+
+# else start by 
 python3 pypass.py
+
 ```
 
 ## author
@@ -28,4 +34,6 @@ python3 pypass.py
 Tsitsi Flora Munikwa 
 
 ## contribution
+
+Beven Nyamande [github](http://bevennyamande.github.io)
 
