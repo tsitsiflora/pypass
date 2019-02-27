@@ -9,14 +9,14 @@ def console_i():
     nickname = str(input(">>>Nickname: "))
     dob = str(input(">>>Date of Birth [YYYY-MM-DD]: "))
         
-    adds = str(input("\n\n>>>Would you like to add more information about the target?[Y/N]: "))
-    if adds == 'y' or 'Y':
-        other = str(input(">>>Things like fav series/band, food or phrases [separated by commas]: "))
-    elif adds == 'N' or 'n':
+    adds = str(input("\n\n>>>Would you like to add more information about the target?[y/n]: "))
+    if adds == 'y':
+        extra = str(input(">>>Things like fav series/band, food or phrases [separated by commas]: "))
+    elif adds == 'n':
         print('Password list ready!')
     else :
         print("Invalid input!")
-    return name, surname, nickname, dob, other
+    return name, surname, nickname, dob, extra
 
 def clean_input(a):
     clean = a.lower()
@@ -38,6 +38,7 @@ def parse_other(info):
 def fstlevel(name):
     pass0 = name
     pass1 = name.title()
+    print(pass0, pass1)
 
 def basic(name, surname):
     if name != 0 and surname != 0:
