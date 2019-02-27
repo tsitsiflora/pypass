@@ -1,14 +1,20 @@
 import click
 
+global profile 
 
 def other_info_callback(ctx, param, value):
     pass
 
+def clean_input(a):
+    clean = a.lower()
+    return ''.join(i for i in clean if i.isalnum())
 
 @click.command()
-@click.option('--fullname', prompt='Enter target\'s fullname',
-              help='Target\'s fullname ')
-@click.option('--nickname', prompt='Enter target\'s nickname',
+@click.option('--firstname', prompt='Enter target\'s firstname: ',
+              help='Target\'s firstname ')
+@click.option('--surname', prompt='Enter target\'s surname: ',
+              help='Target\'s surname'  )
+@click.option('--nickname', prompt='Enter target\'s nickname: ',
               help='Target\'s nickname')
 @click.option('--date_of_birth',
               prompt='Enter target\'s date of birth in this format dd-mm-yyyy',
@@ -22,21 +28,28 @@ def other_info_callback(ctx, param, value):
               help='The file to write information about the target',
               default='password.txt', show_default=True)
 
-def pypass(fullname, nickname, date_of_birth, other, output_file):
+
+def tooobv(firstname):
+    
+
+
+
+
+def pypass(firstname,surname, nickname, date_of_birth, other, output_file):
     '''
-    Command line password cracker based on user provided information
+    Command line password profiler based on user provided information
     '''
 
-    if fullname and nickname and date_of_birth:
+    if firstname and surname and nickname and date_of_birth:
         # if all the information about the target has been provided
         with open(output_file, 'w+') as _file:
             if not other == 'no':
                 # so we have other information provided
                 _file.write('{}\t {}\t {}'.format(
-                                fullname, nickname, date_of_birth))
+                                firstname, nickname, date_of_birth))
             # else other is none
             _file.write('{}\t {}\t {}'.format(
-                                fullname, nickname, date_of_birth))
+                                firstname, nickname, date_of_birth))
 
 
 if __name__ == '__main__':
