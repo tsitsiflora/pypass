@@ -8,7 +8,7 @@ Weak passwords can be defined as short, those that use only alphanumeric charact
 
 pypass is a password compiler, written in Python. It accepts input about the target from the user and returns possible passwords in a .txt file. Password lists are custom made, based on the information the user provides. This caters for passwords that include native language words. pypass can be used when performing password cracking(ethically) using the dictionary attack.
 
-### Be sure to leave a star on the project to show your support.
+### Be sure to leave a star on the project to show your support
 
 ## requirements
 
@@ -16,13 +16,15 @@ You need Python3 to run pypass.
 
 ## license
 
-See .LICENCE 
+See .LICENCE  
 
 ## quick start
+
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 python3 pypass.py
+
 =======
 ```
 =======
