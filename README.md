@@ -20,11 +20,21 @@ See .LICENCE
 
 ## quick start
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 python3 pypass.py
 =======
 ```
+=======
+```python
+
+# to get help information
+python3 pypass.py --help
+
+# else start by 
+>>>>>>> 015a0a9bbfe1d44b036058c701d121cc12833cc9
 python3 pypass.py
+
 ```
 >>>>>>> 498c74cdf76fd4ea34cb3d45d8bdc38269f79be6
 
@@ -33,4 +43,6 @@ python3 pypass.py
 Tsitsi Flora Munikwa 
 
 ## contribution
+
+Beven Nyamande [github](http://bevennyamande.github.io)
 
