@@ -1,6 +1,5 @@
 import click
-
-global profile 
+allpass = []
 
 def other_info_callback(ctx, param, value):
     pass
@@ -8,6 +7,9 @@ def other_info_callback(ctx, param, value):
 def clean_input(a):
     clean = a.lower()
     return ''.join(i for i in clean if i.isalnum())
+
+def reverser(a):
+    #use deque to come up wuth a function to reverse the given word
 
 @click.command()
 @click.option('--firstname', prompt='Enter target\'s firstname: ',
@@ -24,14 +26,21 @@ def clean_input(a):
               prompt="Do you have other info about the target? ",
               help='Other useful info about the target ie hobbies, likes, etc',
               type=click.Choice(['yes', 'no']), callback=other_info_callback)
-@click.option('--output_file',
-              help='The file to write information about the target',
-              default='password.txt', show_default=True)
 
 
 def tooobv(firstname):
-    
+    pass0 = clean_input(firstname)
+    pass1 = clean_input(firstname.title())
+    pass2 = clean_input(firstname.upper())
+    return allpass.append(pass0, pass1, pass2)
 
+def lvl1(firstname, surname):
+    pass3 = clean_input(firstname + surname)
+    pass4 = clean_input(surname + firstname)
+    pass5 = clean_input(firstname.title() + surname.title())
+    pass6 = clean_input(surname.title() + firstname.title())
+    pass7 = clean_input((firstname + surname).upper())
+    pass8 = clean_input((surname + firstname).upper())
 
 
 
