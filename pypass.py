@@ -4,14 +4,17 @@ allpass = []
 def other_info_callback(ctx, param, value):
     pass
 
+#function lower-cases the provided string
+#strips the string off all special characters and spaces
 def clean_input(a):
     clean = a.lower()
     return ''.join(i for i in clean if i.isalnum())
 
+#function uses slicing to return a reverse of the string provided
 def reverser(a):
-    #use deque to come up wuth a function to reverse the given word
+    return a[::-1]
 
-@click.command()
+#@click.command()
 @click.option('--firstname', prompt='Enter target\'s firstname: ',
               help='Target\'s firstname ')
 @click.option('--surname', prompt='Enter target\'s surname: ',

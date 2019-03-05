@@ -1,5 +1,5 @@
 import pytest
-from pypass import clean_input
+from pypass import clean_input, reverser
 
 def test_clean():
     assert clean_input('bob') == 'bob'
@@ -10,3 +10,5 @@ def test_clean():
     assert clean_input('james%') != 'james%'
     assert clean_input('Blessing') != 'Blessing'
 
+def test_reverser():
+    assert reverser('flora') == 'arolf'

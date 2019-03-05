@@ -1,6 +1,6 @@
 # pypass
 
-Article1: https://medium.com/@tsitsimunikwa97/pypass-a-beginner-level-password-compiler-4922b5a7e04f
+[Article1]: https://medium.com/@tsitsimunikwa97/pypass-a-beginner-level-password-compiler-4922b5a7e04f
 
 ## about
 
@@ -10,41 +10,6 @@ pypass is a password compiler, written in Python. It accepts input about the tar
 
 ### Be sure to leave a star on the project to show your support
 
-## requirements
-
-You need Python3 to run pypass.
-
-## license
-
-See .LICENCE  
-
-## quick start
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-python3 pypass.py
-
-=======
-```
-=======
-```python
-
-# to get help information
-python3 pypass.py --help
-
-# else start by 
->>>>>>> 015a0a9bbfe1d44b036058c701d121cc12833cc9
-python3 pypass.py
-
-```
->>>>>>> 498c74cdf76fd4ea34cb3d45d8bdc38269f79be6
-
 ## author
 
-Tsitsi Flora Munikwa 
-
-## contribution
-
-Beven Nyamande [github](http://bevennyamande.github.io)
-
+Tsitsi Flora Munikwa  
