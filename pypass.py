@@ -35,7 +35,8 @@ def tooobv(firstname):
     pass0 = clean_input(firstname)
     pass1 = clean_input(firstname.title())
     pass2 = clean_input(firstname.upper())
-    return allpass.append(pass0, pass1, pass2)
+    pass3 = clean_input(reverser(firstname))
+    return allpass.append(pass0, pass1, pass2, pass3)
 
 def lvl1(firstname, surname):
     pass3 = clean_input(firstname + surname)
@@ -52,17 +53,7 @@ def pypass(firstname,surname, nickname, date_of_birth, other, output_file):
     Command line password profiler based on user provided information
     '''
 
-    if firstname and surname and nickname and date_of_birth:
-        # if all the information about the target has been provided
-        with open(output_file, 'w+') as _file:
-            if not other == 'no':
-                # so we have other information provided
-                _file.write('{}\t {}\t {}'.format(
-                                firstname, nickname, date_of_birth))
-            # else other is none
-            _file.write('{}\t {}\t {}'.format(
-                                firstname, nickname, date_of_birth))
-
+    
 
 if __name__ == '__main__':
     pypass()
