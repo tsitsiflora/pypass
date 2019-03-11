@@ -45,15 +45,14 @@ def lvl1(firstname, surname):
     pass6 = clean_input(surname.title() + firstname.title())
     pass7 = clean_input((firstname + surname).upper())
     pass8 = clean_input((surname + firstname).upper())
+    return allpass.append(pass3, pass4, pass5, pass6, pass7, pass8)
 
+def main(firstname):
 
-
-def pypass(firstname,surname, nickname, date_of_birth, other, output_file):
-    '''
-    Command line password profiler based on user provided information
-    '''
-
-    
+    for i in allpass:
+        with open(firstname + '.txt', 'wb') as passfile:
+            print(i, file=passfile)
+        
 
 if __name__ == '__main__':
-    pypass()
+    main()
