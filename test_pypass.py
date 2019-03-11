@@ -12,3 +12,9 @@ def test_clean():
 
 def test_reverser():
     assert reverser('flora') == 'arolf'
+    assert reverser('sarah') == 'haras'
+    assert reverser('Liya') == 'ayiL'
+    assert reverser('tsitsi') == 'istist'
+    assert reverser('hannah') == 'hannah'
+    assert reverser('MARY') == 'YRAM'
+    assert reverser('john') != 'john'
