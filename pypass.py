@@ -1,8 +1,4 @@
 import click
-allpass = []
-
-def other_info_callback(ctx, param, value):
-    pass
 
 #function lower-cases the provided string
 #strips the string off all special characters and spaces
@@ -14,45 +10,29 @@ def clean_input(a):
 def reverser(a):
     return a[::-1]
 
-#@click.command()
-@click.option('--firstname', prompt='Enter target\'s firstname: ',
-              help='Target\'s firstname ')
-@click.option('--surname', prompt='Enter target\'s surname: ',
-              help='Target\'s surname'  )
-@click.option('--nickname', prompt='Enter target\'s nickname: ',
-              help='Target\'s nickname')
-@click.option('--date_of_birth',
-              prompt='Enter target\'s date of birth in this format dd-mm-yyyy',
-              help='Target\'s date of birth',
-              type=click.DateTime(formats=['%d-%m-%Y']))
-@click.option('--other',
-              prompt="Do you have other info about the target? ",
-              help='Other useful info about the target ie hobbies, likes, etc',
-              type=click.Choice(['yes', 'no']), callback=other_info_callback)
+def takeother(other):
+    return other.split(',')
 
 
-def tooobv(firstname):
-    pass0 = clean_input(firstname)
-    pass1 = clean_input(firstname.title())
-    pass2 = clean_input(firstname.upper())
-    pass3 = clean_input(reverser(firstname))
-    return allpass.append(pass0, pass1, pass2, pass3)
+#interactive shell, accepting input from the user
+name = str(input('>>>Enter name: '))
+surname = str(input('>>>Enter surname: '))
+nickname = str(input('>>>Enter nickname: '))
+#dob = datetime.datetime(format, '%d%m%Y')
+other = str(input('Enter additional info: '))
 
-def lvl1(firstname, surname):
-    pass3 = clean_input(firstname + surname)
-    pass4 = clean_input(surname + firstname)
-    pass5 = clean_input(firstname.title() + surname.title())
-    pass6 = clean_input(surname.title() + firstname.title())
-    pass7 = clean_input((firstname + surname).upper())
-    pass8 = clean_input((surname + firstname).upper())
-    return allpass.append(pass3, pass4, pass5, pass6, pass7, pass8)
 
-def main(firstname):
+l = []
 
-    for i in allpass:
-        with open(firstname + '.txt', 'wb') as passfile:
-            print(i, file=passfile)
-        
+pass1 = clean_input(name)
+pass2 = clean_input(reverser(name))
+l.append(pass1)
+l.append(pass2)
+    
+with open(name + '.txt', 'w+') as passfile:
+    for i in l:
+        print(i, file=passfile)
+print("You file is ready.")
 
-if __name__ == '__main__':
-    main()
+
+
