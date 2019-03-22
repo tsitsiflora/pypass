@@ -18,18 +18,17 @@ def takeother(other):
 
 
 @click.command()
-@click.option('interactive','/-i', help="Interactive shell for accepting input")
-def interactive_shell(interactive):
-    if interactive:
-        main()
-
+def main():
+    click.echo("Welcome to pypass v0.1.                         ========
+                                                                |
+    ")
 
 
 
 
 
 #interactive shell, accepting input from the user
-@click.command()
+'''@click.command()
 def main():
     name = click.prompt('>>>Enter name ', type=str)
     surname = click.prompt('>>>Enter surname ', type=str)
@@ -40,7 +39,7 @@ def main():
         click.echo('Password list ready!')
 
     return(name, surname, nickname, dob, other)
-
+'''
 
 if __name__ == '__main__':
     main()
