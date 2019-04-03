@@ -52,7 +52,7 @@ def main(about):
 
     for i in pass_list:
         with open('passwords.txt', 'w+' ) as passfile:
-            print(i>passfile)  
+            passfile.write(i)
 
 
 if __name__ == "__main__":
