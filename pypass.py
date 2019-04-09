@@ -1,6 +1,12 @@
 #!/usr/bin/env python
-from datetime import datetime
 import click
+import pyfiglet
+
+
+# banner
+def pypass_banner():
+    ascii_banner = pyfiglet.figlet_format("pypass")
+    print(ascii_banner)
 
 # function lower-cases the provided string
 # strips the string off all special characters and spaces
@@ -30,16 +36,22 @@ def takeother(other):
 
 @click.command()
 @click.option('--about', is_flag=True, help='Information about the program and its usage.')
-# @click.option('--full', is_flag=True, help='Option to get an almost exhaustive list of passwords.
-# Requires more information about the target.')
-# interactive shell, accepting input from the user
-def main(about):
+@click.option('--i', is_flag=True, help='Interactive shell to accept information about the target.')
+def main(about, i):
+
+    if about:
+        pypass_banner()
+        click.echo(
+            "Welcome to pypass Version1.0!                     pypass --help for more options")
+    else:
+        pypass()
+
+
+def pypass():
 
     profile = {}
     pass_list = []
-    if about:
-        click.echo(
-            "Welcome to pypass Version0.1!           pypass --help for more options")
+
     name = click.prompt('>>>Enter name ', type=str)
     surname = click.prompt('>>>Enter surname ', type=str)
     nickname = click.prompt('>>>Enter nickname ', type=str)
