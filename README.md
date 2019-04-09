@@ -1,6 +1,6 @@
 # pypass
 
-[Article1]: https://medium.com/@tsitsimunikwa97/pypass-a-beginner-level-password-compiler-4922b5a7e04f
+[article1]: https://medium.com/@tsitsimunikwa97/pypass-a-beginner-level-password-compiler-4922b5a7e04f
 
 ## about
 
@@ -12,10 +12,11 @@ pypass is a command line password compiler, written in Python. It accepts input 
 
 git clone [project]
 create virtual environment
-run: pypass
+run: pypass --i
+for more options run:pypass --help
 
 ### Be sure to leave a star on the project to show your support
 
 ## author
 
-Tsitsi Flora Munikwa  
+Tsitsi Flora Munikwa
